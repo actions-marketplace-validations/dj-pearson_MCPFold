@@ -19,7 +19,7 @@ jobs:
     name: secret scan (gitleaks)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
       - name: gitleaks
         run: |
@@ -33,7 +33,7 @@ jobs:
     name: dependency audit (pnpm)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
       - name: Install pnpm
         uses: pnpm/action-setup@v6
@@ -42,7 +42,7 @@ jobs:
           run_install: false
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 20
           cache: pnpm

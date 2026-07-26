@@ -28,7 +28,7 @@ jobs:
     name: publish to Marketplace
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
       - name: Gate on the VSCE_PAT secret
         id: gate
@@ -45,7 +45,7 @@ jobs:
       - uses: pnpm/action-setup@v6
         with:
           version: 10.33.0
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
           cache: pnpm
